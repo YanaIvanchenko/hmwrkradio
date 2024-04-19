@@ -100,4 +100,14 @@ public class RadioTest {
 
         Assertions.assertEquals(0, radio.getCurrentVolume());
     }
+
+    @Test
+    public void checkDefaultValues() {
+        Radio radio = new Radio();
+
+        radio.setCurrentStation(0);
+        radio.prev();
+
+        Assertions.assertEquals(9, radio.getCurrentStation());
+    }
 }
